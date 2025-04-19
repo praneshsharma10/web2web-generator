@@ -27,7 +27,7 @@ app.post("/template", (req, res) => __awaiter(void 0, void 0, void 0, function* 
     const prompt = req.body.prompt;
     const response = yield anthropic.messages.create({
         messages: [{
-                role: 'user', content: "prompt"
+                role: 'user', content: prompt
             }],
         model: 'claude-3-7-sonnet-20250219',
         max_tokens: 200,
